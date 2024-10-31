@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_Note2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Book"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:id="@+id/judul"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/judul"
+        android:id="@+id/cardView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="75dp">
+
+        <ImageView
+            android:id="@+id/addPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/baseline_insert_photo_24"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note: Image Harus diisi !!"
+        android:textStyle="italic"
+        android:textSize="13sp"
+        android:layout_below="@id/cardView"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/addNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round"
+        android:hint="Nama"
+        android:layout_below="@id/note"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:padding="20dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/addNP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round"
+        android:hint="Nama Panggilan"
+        android:layout_below="@id/addNama"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:padding="20dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/addEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/addNP"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:padding="20dp"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/addAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addEmail"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round"
+        android:drawableStart="@drawable/baseline_location_on_24"
+        android:drawablePadding="10dp"
+        android:hint="Alamat"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/addTglLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round"
+        android:hint="Tanggal Lahir"
+        android:inputType="date"
+        android:layout_below="@id/addAlamat"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:padding="20dp"
+        android:drawableStart="@drawable/baseline_date_range_24"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/addHP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round"
+        android:hint="Nomor Handphone"
+        android:inputType="phone"
+        android:layout_below="@id/addTglLahir"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:padding="20dp"
+        android:drawableStart="@drawable/baseline_call_24"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_done_24"
+        app:tint="@color/white"
+        android:backgroundTint="@color/white"/>
+
+</RelativeLayout>
